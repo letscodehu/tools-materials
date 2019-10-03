@@ -1,0 +1,32 @@
+{
+    "name" : "letscode.hu",
+    "description" : "Letscode.hu composer repository",
+    "homepage" : "http://localhost:8888",
+    "include-filename" : "all.json",
+    "repositories" : [
+        {
+            "packagist.org" : false
+        },
+        {
+            "type" : "vcs",
+            "url" : "https://github.com/letscodehu/dummy-persistence-layer"
+        },
+        {
+            "type" : "vcs",
+            "url" : "https://github.com/letscodehu/dummy-service-layer"
+        },
+        {
+            "type" : "vcs",
+            "url" : "https://github.com/letscodehu/dummy-presentation-layer"
+        },
+        {
+            "type" : "vcs",
+            "url" : "https://github.com/letscodehu/persistence-layer-api"
+        },
+        {
+            "type" : "vcs",
+            "url" : "https://github.com/letscodehu/service-layer-api"
+        }
+    ],
+    "require-all" : true
+}

@@ -1,0 +1,22 @@
+{
+  "name": "letscode-npm-basics",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "keywords": [],
+  "author": "Papp Krisztián <fejlesztes@letscode.hu> (https://www.letscode.hu/)",
+  "license": "MIT",
+  "dependencies": {
+    "whatwg-fetch": "^3.0.0"
+  },
+  "bin": {
+    "letscodes": "./script.js"
+  },
+  "devDependencies": {
+    "gulp": "^4.0",
+    "mocha": "^5.0"
+  }
+}

@@ -1,0 +1,50 @@
+{
+    "name": "tacsiazuma/composer-basics",
+    "type": "project",
+    "require": {
+        "nikic/fast-route": "^1.2",
+        "symfony/templating": "^3.3",
+        "letscodehu/dummy-persistence-layer" : "1.0.0",
+        "letscodehu/dummy-presentation-layer" : "1.0.0",
+        "letscodehu/dummy-service-layer" : "1.0.0"
+    },
+    "repositories" : [
+        {
+            "type" : "composer",
+            "url" : "http://localhost:8888/"
+        }
+    ],
+    "config" : {
+        "secure-http" : false
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.3",
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Papp Krisztián",
+            "email": "fejlesztes@letscode.hu"
+        }
+    ],
+    "autoload" : {
+        "psr-4": {
+            "Letscodehu\\" : "src/"
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "echo 'What have you done?'"
+        ],
+        "test" : [
+            "vendor/phpunit/phpunit/phpunit"
+        ],
+        "verify" : [
+            "vendor/squizlabs/php_codesniffer/bin/phpcs src/"
+        ],
+        "build" : [
+            "@test", "@verify", "composer archive"
+        ]
+    }
+}
