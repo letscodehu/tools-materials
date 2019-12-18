@@ -1,3 +1,9 @@
 section {
     font-size: 20px;
+    font-family: Roboto;
+}
+
+.logo {
+    background: url('../img/letscodelogo190.png') no-repeat center;
+    min-height: 190px;
 }
