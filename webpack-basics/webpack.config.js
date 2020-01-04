@@ -24,11 +24,25 @@ module.exports = {
                 ]
             },
             {
+                test : /\.(woff|woff2)$/,
+                use: [
+                    {
+                        loader : 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.(png|jp(e*)g|svg)$/,  
                 use: [{
                     loader: 'url-loader',
                     options: {
-                        limit: 2000
+                        limit: 2000,
+                        name : '[name].[ext]',
+                        outputPath: 'img/'
                     }
                 }] 
             }
